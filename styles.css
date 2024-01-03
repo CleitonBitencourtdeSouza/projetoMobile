@@ -1,0 +1,25 @@
+@import url("styles/header.css"); /*Para não precisar importar no HTML por meio do href, podemos linkar outro arquivo do CSS para carregar junto com esse que ja esta importado*/
+@import url("styles/banner.css");
+@import url("styles/carrosel.css");
+@import url("styles/topicos.css");
+@import url("styles/contato.css");
+@import url("styles/rodape.css");
+
+:root{
+    --cor-de-fundo:#EBECEE;
+    --branco: #FFFFFFFF;
+    --fonte-principal:"Poppins";
+    --laranja: #EB9B00;
+    --azul: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    --azul2: #002f52;
+
+
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+

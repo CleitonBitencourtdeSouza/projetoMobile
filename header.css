@@ -1,0 +1,62 @@
+.cabeçalho__menu-hamburguer{
+    width: 24px;
+    height: 24px;
+    background-image: url("../imagens/Menu.svg");
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cabeçalho{
+    background-color: var(--branco);
+    display: flex; /*display=flez transformou em um flex container para flex itens, com isso é liberado varias possibilidades de manipução desses itens */
+    justify-content: space-between; /*Separou os elementos com espaço*/
+    align-items: center;
+    position: relative;/* liberar  voce colocar outros atributos para top=topo ; left=esquerda ; right=direita ...*/
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.container__imagem{
+    padding: 1em;
+}
+.lista-menu{
+    display: none; /*Com esse codigo , fara que a lista não aparece ao lado do botão , no caso "sumir" da pagina*/
+    position: absolute; /*Permite que voce movimente o seu elemento de acordo como o que veio antes (geralmente o elemento pai) que esteja com position diferente de static  */
+    top: 100%; /*Com o top 100% , o elemento lista-menu tirou 100% do cabeçalho e ficou abaixo */
+    width: 60vw;
+    
+}
+.lista-menu__link{
+    text-decoration: none;
+}
+
+.container__botao:checked~.lista-menu {
+    display: block;
+} /* "~" é uma condicional , ao aparecer o botão do menu checked e colocarmos a condiocnal "~" o codigo iá buscar algo em seguida para executar , no caso a nossa lista, fazer aparecer*/ 
+
+.lista-menu__titulo,
+.lista-menu__item{
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.lista-menu__titulo{
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.lista-menu__link{
+    background: var(azul);
+    background-clip: text; /*Comando que irá aplicar a cor somente a onde possui texto*/
+    text-transform: uppercase;
+
+
+}
+
+.container__botao{
+    display: none;
+}
